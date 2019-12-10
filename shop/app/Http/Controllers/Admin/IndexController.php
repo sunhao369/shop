@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Menu\MenuController;
+use App\Http\Controllers\Admin\Menu\MenuController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -18,7 +18,7 @@ class IndexController extends Controller
         //登录之后首页
         $menu=new MenuController();
         $data=$menu->getMenu();
-        return view('admin/index',['data'=>$data]);
+        return view('Admin/index',['data'=>$data]);
     }
 
     public function menu()

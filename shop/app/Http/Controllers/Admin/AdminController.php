@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Menu\MenuController;
+use App\Http\Controllers\Admin\Menu\MenuController;
 use App\Models\Admin;
 use App\Models\Menu;
 use Illuminate\Support\Facades\Validator;

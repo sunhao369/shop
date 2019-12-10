@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Dommodity;
+namespace App\Http\Controllers\Admin\Dommodity;
 
 use App\Models\Goodsbutes;
 use Illuminate\Http\Request;

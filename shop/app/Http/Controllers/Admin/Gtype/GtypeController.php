@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Gtype;
+namespace App\Http\Controllers\Admin\Gtype;
 
 use App\models\Gtype;
 use Illuminate\Http\Request;

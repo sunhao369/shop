@@ -19,13 +19,13 @@ Route::get('list', 'Admin\AdminController@index');
 Route::get('create', 'Admin\AdminController@create');
 Route::any('store', 'Admin\AdminController@store');
 Route::get('index', 'Admin\IndexController@index');
-Route::any('login', 'Login\LoginController@login');
-Route::any('doLogin', 'Login\LoginController@doLogin');
+Route::any('login', 'Admin\Login\LoginController@login');
+Route::any('doLogin', 'Admin\Login\LoginController@doLogin');
 
-Route::any('menu', 'Menu\MenuController@show');
-Route::any('addMenu', 'Menu\MenuController@index');
-Route::any('createMenu', 'Menu\MenuController@create');
-Route::any('menuList', 'Menu\MenuController@list');
+Route::any('menu', 'Admin\Menu\MenuController@show');
+Route::any('addMenu', 'Admin\Menu\MenuController@index');
+Route::any('createMenu', 'Admin\Menu\MenuController@create');
+Route::any('menuList', 'Admin\Menu\MenuController@list');
 
 Route::get ('warehouse/list','Admin\WarehouseController@index');
 Route::get ('warehouse/create','Admin\WarehouseController@create');
@@ -47,12 +47,12 @@ Route::get('orderadd','Admin\OrderController@orderadd');
 Route::get('orderdel','Admin\OrderController@orderdel');
 Route::post('orderCreate','Admin\orderController@orderCreate');
 
-Route::get('goodsShow','Goods\CommodityController@goodsShow');
-Route::get('goods','Goods\CommodityController@goods');
-Route::get('goodsdel','Goods\CommodityController@goodsDel');
+Route::get('goodsShow','Admin\Goods\CommodityController@goodsShow');
+Route::get('goods','Admin\Goods\CommodityController@goods');
+Route::get('goodsdel','Admin\Goods\CommodityController@goodsDel');
 
-Route::get('dommodityShow','Dommodity\DommodityController@dommodityShow');
-Route::get('dommoditydel','Dommodity\DommodityController@dommodityDel');
+Route::get('dommodityShow','Admin\Dommodity\DommodityController@dommodityShow');
+Route::get('dommoditydel','Admin\Dommodity\DommodityController@dommodityDel');
 
-Route::get('gtypeshow','Gtype\GtypeController@gtypeShow');
-Route::get('gtypedel','Gtype\GtypeController@gtypeDel');
+Route::get('gtypeshow','Admin\Gtype\GtypeController@gtypeShow');
+Route::get('gtypedel','Admin\Gtype\GtypeController@gtypeDel');
