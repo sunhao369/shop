@@ -21,7 +21,7 @@ class LoginController extends Controller
         $res=Admin::where('admin_name',$admin_name)->where('admin_pwd',$admin_password)->first();
         if ($res) {
             session(['id'=>$res['id']]);
-            return redirect('index');
+            return redirect('admin');
 
         }
         else {
