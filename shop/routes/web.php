@@ -58,4 +58,4 @@ Route::get('gtypeshow','Admin\Gtype\GtypeController@gtypeShow');
 Route::get('gtypedel','Admin\Gtype\GtypeController@gtypeDel');
 
 Route::get('/','Index\IndexController@index');
-Route::get('','');
+Route::get('index','Index\IndexController@index');

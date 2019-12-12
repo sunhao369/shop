@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Index;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -13,31 +14,14 @@ class IndexController extends Controller
      * @return \Illuminate\Http\Response
      *
      */
-    public function login(){
-        return view('Index/index/login');
 
-    }
-
-    public function register(){
-        return view("Index/index/register");
-    }
     public function index()
     {
-        //
-      
-        return view('Index/index/index');
+        //n f
+        $user = new User();
+        $data = $user::all();
+        return view('Index/index/index',['data'=>$data]);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
     /**
      * Store a newly created resource in storage.
      *
