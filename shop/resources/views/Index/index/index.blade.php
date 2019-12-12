@@ -102,7 +102,7 @@
             <a href="#"><img src="/index/images/bab1.png" width="38" height="35">会员</a>
             <a href="#"><img src="/index/images/bab2.png" width="38" height="35">活动</a>
             <a href="#"><img src="/index/images/bab5.png" width="38" height="35">网店</a>
-            <a href="#"><img src="/index/images/bab6.png" width="38" height="35">购物车</a>
+            <a href="/category"><img src="/index/images/bab6.png" width="38" height="35">购物车</a>
             <a href="#"><img src="/index/images/bab3.png" width="38" height="35">资讯</a>
             <a href="#"><img src="/index/images/bab7.png" width="38" height="35">简介</a>
             <a href="#"><img src="/index/images/bab4.png" width="38" height="35">留言</a>
@@ -443,11 +443,11 @@ $(".con ul li").hover(function(){
       <div class="fllb">
        <div class="rxk">
         <a href="#" class="rxcptu"><img src="/index/images/tu.jpg" width="215" height="215"></a>
-        <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
+        <a href="#" class="rxcpm"></a>
         <div class="rxcpjg">￥<span>36.00</span></div>
         <div class="yinc">
           <div class="yjg">￥<span>36.00</span></div>
-          <a href="#" class="ygm"><img src="/index/images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
+          <a href="Index/index/category" class="ygm"><img src="/index/images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
         </div>
       </div>
       <div class="rxk">

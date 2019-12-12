@@ -89,7 +89,7 @@
         var id=$(this).val();
         // alert(id);
         $.ajax({
-            url:"http://www.shop.com/index.php/orderdel",
+            url:"http://www.shop.com/index.php/orderDel",
             data:{
                 id:id
             },

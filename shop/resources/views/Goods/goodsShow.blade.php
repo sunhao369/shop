@@ -135,7 +135,7 @@
         // alert(123);
         var id=$(this).val();
         $.ajax({
-            url:"http://www.shop.com/index.php/goodsdel",
+            url:"http://www.shop.com/index.php/goodsDel",
             data:{
                 id:id
             },

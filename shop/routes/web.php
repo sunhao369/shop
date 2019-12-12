@@ -37,25 +37,25 @@ Route::get('/warehouse/destroy','Admin\WarehouseController@destroy');
 Route::get('userShow','Admin\UsersController@userShow');
 Route::post('upload','Admin\UsersController@userUpload');
 Route::get('user','Admin\UsersController@user');
-Route::get('userdel','Admin\UsersController@userdel');
+Route::get('userDel','Admin\UsersController@userdel');
 Route::post('userAdd','Admin\UsersController@userAdd');
 
 
 Route::get('order','Admin\OrderController@order');
-Route::get('ordershow','Admin\OrderController@ordershow');
-Route::get('orderadd','Admin\OrderController@orderadd');
-Route::get('orderdel','Admin\OrderController@orderdel');
+Route::get('orderShow','Admin\OrderController@ordershow');
+Route::get('orderAdd','Admin\OrderController@orderadd');
+Route::get('orderDel','Admin\OrderController@orderdel');
 Route::post('orderCreate','Admin\orderController@orderCreate');
 
 Route::get('goodsShow','Admin\Goods\CommodityController@goodsShow');
 Route::get('goods','Admin\Goods\CommodityController@goods');
-Route::get('goodsdel','Admin\Goods\CommodityController@goodsDel');
+Route::get('goodsDel','Admin\Goods\CommodityController@goodsDel');
 
 Route::get('dommodityShow','Admin\Dommodity\DommodityController@dommodityShow');
-Route::get('dommoditydel','Admin\Dommodity\DommodityController@dommodityDel');
+Route::get('dommodityDel','Admin\Dommodity\DommodityController@dommodityDel');
 
-Route::get('gtypeshow','Admin\Gtype\GtypeController@gtypeShow');
-Route::get('gtypedel','Admin\Gtype\GtypeController@gtypeDel');
+Route::get('gtypeShow','Admin\Gtype\GtypeController@gtypeShow');
+Route::get('gtypeDel','Admin\Gtype\GtypeController@gtypeDel');
 
 Route::get('/','IndexController@index');
 Route::get('/logins','IndexController@login');
@@ -66,3 +66,4 @@ Route::any('/index/quit','IndexController@quit');
 
 Route::get('create','IndexController@create');
 Route::get('orders','IndexController@store');
+Route::get('category','IndexController@show');

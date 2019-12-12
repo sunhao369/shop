@@ -88,7 +88,7 @@ class IndexController extends Controller
     {
        $user = new Goods();
        $data = $user::all();
-       return view("Index/index/index",['data'=>$data]);
+       return view("Index/index/category",['data'=>$data]);
     }
     /**
      * Store a newly created resource in storage.
@@ -109,10 +109,10 @@ class IndexController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         //
-        
+        return view("Index/index/category");
     }
     /**
      * Show the form for editing the specified resource.
