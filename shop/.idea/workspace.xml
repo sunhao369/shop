@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded4dd6e-5097-412b-9cce-7f53583f7e9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ded4dd6e-5097-412b-9cce-7f53583f7e9a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +35,8 @@
       <file leaf-file-name="gtypeshow.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Gtype/gtypeshow.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="53" column="48" lean-forward="true" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+            <state relative-caret-position="228">
+              <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -189,7 +187,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="630" />
     <option name="y" value="75" />
     <option name="width" value="1270" />
@@ -322,7 +320,7 @@
       <workItem from="1575937910625" duration="3526000" />
       <workItem from="1575958362282" duration="1292000" />
       <workItem from="1576110552489" duration="11994000" />
-      <workItem from="1576146874472" duration="2565000" />
+      <workItem from="1576146874472" duration="3250000" />
     </task>
     <task id="LOCAL-00001" summary="项目">
       <created>1575376122064</created>
@@ -349,7 +347,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52189000" />
+    <option name="totallyTimeSpent" value="52874000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -361,7 +359,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -673,8 +671,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Gtype/gtypeshow.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" column="48" lean-forward="true" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+        <state relative-caret-position="228">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
         </state>
       </provider>
     </entry>
