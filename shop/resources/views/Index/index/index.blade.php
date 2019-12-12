@@ -76,7 +76,7 @@
 				Hi, 欢迎来到瑞丹堂!
 			</p>
 			<p>
-				<a href="index/login" class="user_info_login">登录</a><a href="#" class="user_info_reg">注册</a>
+				<a href="/logins" class="user_info_login">登录</a><a href="#" class="user_info_reg">注册</a>
 			</p>
 		</div>
 	</div>

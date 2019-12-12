@@ -6,7 +6,7 @@
   <div class="log-lf"></div>
   <div class="log-rf">
     <div class="logk">
-    <form id="loginform" action="" method="post">
+    <form id="loginform" action="">
       <div class="loto"><img src="/index/images/login-t.png" width="145" height="145" class="login-t"><img src="/index/images/login-bg.png" width="221" height="247" class="login-bg"></div>
       <div class="lo-dl">
         <div class="lf">账号：</div>

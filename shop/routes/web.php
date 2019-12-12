@@ -57,5 +57,12 @@ Route::get('dommoditydel','Admin\Dommodity\DommodityController@dommodityDel');
 Route::get('gtypeshow','Admin\Gtype\GtypeController@gtypeShow');
 Route::get('gtypedel','Admin\Gtype\GtypeController@gtypeDel');
 
-Route::get('/','Index\IndexController@index');
-Route::get('index','Index\IndexController@index');
+Route::get('/','IndexController@index');
+Route::get('/logins','IndexController@login');
+Route::get('/index/register','IndexController@register');
+Route::any('/index/regDo','IndexController@regDo');
+Route::any('/index/logDo','IndexController@logDo');
+Route::any('/index/quit','IndexController@quit');
+
+Route::get('create','IndexController@create');
+Route::get('orders','IndexController@store');
