@@ -79,6 +79,13 @@ class IndexController extends Controller
             return view('Index/index/index');
         }
     }
+    public function productShow(){
+
+       $goods = new Goods();
+
+       $data = $goods::all();
+       return view("Index/index/index",['data'=>$data]);
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -67,3 +67,4 @@ Route::any('/index/quit','IndexController@quit');
 Route::get('create','IndexController@create');
 Route::get('orders','IndexController@store');
 Route::get('category','IndexController@show');
+Route::get('productShow','IndexController@productShow');
