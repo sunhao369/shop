@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Orderdetail;
 use App\Models\User;
-use App\Models\Goods;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -18,17 +16,25 @@ class IndexController extends Controller
      */
     public function login(){
         return view('Index/index/login');
+
     }
+
     public function logDo(Request $request){
         $data = $request->all();
         $username = $data['username'];
         $password = md5($data['password']);
-        $res = User::where('username', '=', $username)->where('password', '=', $password)->get();
-        //       dd($res);
-        // $ls = $request->session();
-        // var_dump($ls);die;
+        $res = User::where('username', '=', $username)->where('password', '=', $password)->first();
+//       dd($res);
+      // $ls = $request->session();
+      // var_dump($ls);die;
         if ($res){
 //            echo 1;
+            $id = $res['id'];
+//            dd($id);
+            session(['id'=> $id]);
+            $time = date('Y-m-d H:i:s');
+            session(['time' => $time]);
+
             session(['username' => $username]);
             $data = $request ->session()->get('username');
             if ($data){
@@ -38,20 +44,26 @@ class IndexController extends Controller
                 return view('Index/index/index',['data'=>$data]);
             }
 //        var_dump($data);die;
+
         }else{
-            echo 2;
+            echo "登录失败";
         }
+
     }
+
     public function register(){
         return view("Index/index/register");
     }
+
     public function regDo(Request $request){
         $data = $request->all();
 //       var_dump($data);
         $user = new User();
+
         $user ->_token = $data['_token'];
         $user ->username = $data['username'];
         $user ->password = md5($data['password']);
+        $user ->email = $data['email'];
 //        dd($user);
         $res = $user->save();
         if ($res){
@@ -59,7 +71,9 @@ class IndexController extends Controller
         }else{
             echo 2;
         }
+
     }
+
     public function index(Request $request)
     {
         //
@@ -70,6 +84,7 @@ class IndexController extends Controller
             $data ="";
             return view('Index/index/index',['data'=>$data]);
         }
+
     }
     public  function quit(Request $request){
         $res = $request->session()->forget('username');
@@ -77,15 +92,12 @@ class IndexController extends Controller
             return view('Index/index/index');
         }else{
             return view('Index/index/index');
+
         }
-    }
-    public function productShow(){
 
-       $goods = new Goods();
-
-       $data = $goods::all();
-       return view("Index/index/index",['data'=>$data]);
     }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -93,31 +105,31 @@ class IndexController extends Controller
      */
     public function create()
     {
-       $user = new Goods();
-       $data = $user::all();
-       return view("Index/index/category",['data'=>$data]);
+        //
     }
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
         //
-
     }
+
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
         //
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -128,6 +140,7 @@ class IndexController extends Controller
     {
         //
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -139,6 +152,7 @@ class IndexController extends Controller
     {
         //
     }
+
     /**
      * Remove the specified resource from storage.
      *

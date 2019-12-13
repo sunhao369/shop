@@ -58,5 +58,20 @@ Route::get('gtypeShow','Admin\Gtype\GtypeController@gtypeShow');
 Route::get('gtypeDel','Admin\Gtype\GtypeController@gtypeDel');
 
 Route::get('show','Admin\Gtype\BrandController@brand');
-Route::get('/','IndexController@index');
 
+Route::get('/','IndexController@index');
+Route::get('index/login','IndexController@login');
+Route::get('/index/register','IndexController@register');
+Route::any('/index/regDo','IndexController@regDo');
+Route::any('/index/logDo','IndexController@logDo');
+Route::any('/index/quit','IndexController@quit');
+Route::get('/personage/index','PersonageController@index');
+Route::get('/personage/order','PersonageController@order');
+Route::get('/personage/cart','PersonageController@cart');
+Route::get('/personage/check','PersonageController@check');
+Route::get('/personage/pay','PersonageController@pay');
+Route::get('/personage/address','PersonageController@address');
+Route::get('/personage/recommend','PersonageController@recommend');
+Route::get('/personage/dpayment','PersonageController@dpayment');
+Route::get('/personage/evaluate','PersonageController@evaluate');
+Route::get('/personage/receiving','PersonageController@receiving');

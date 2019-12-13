@@ -1,47 +1,6 @@
-@include('layouts.header');
-    <script type="text/javascript">
-        <!--
-        var timeout         = 500;
-        var closetimer		= 0;
-        var ddmenuitem      = 0;
-        // open hidden layer
-        function mopen(id)
-        {
-            // cancel close timer
-            mcancelclosetime();
-            // close old layer
-            if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
-            // get new layer and show it
-            ddmenuitem = document.getElementById(id);
-            ddmenuitem.style.visibility = 'visible';
-        }
-        // close showed layer
-        function mclose()
-        {
-            if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
-        }
-        // go close timer
-        function mclosetime()
-        {
-            closetimer = window.setTimeout(mclose, timeout);
-        }
-        // cancel close timer
-        function mcancelclosetime()
-        {
-            if(closetimer)
-            {
-                window.clearTimeout(closetimer);
-                closetimer = null;
-            }
-        }
-        // close layer when click-out
-        document.onclick = mclose;
-        // -->
-    </script>
-</head>
 <body>
-<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="sxb.js"></script>
+<script src="/index/js/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/index/sxb.js"></script>
 <style>
     .one_qcode{
         position:absolute;
@@ -62,18 +21,24 @@
         <div class="lf" style="margin-left:0px;">欢迎来到中意家园网上商城！</div>
         <div class="rf toa">
             <ul id="sddm">
-                <a href="#">Hi，请先登录</a>
-                <a href="#" style="color:#ec2832; padding-left:0;">注册</a>
-                <li style="padding-left:10px; background:url(images/wei.png) no-repeat left center; background-size:18px;">
+<!--                --><?php
+//                if(session()->has('username')){
+//                    echo "$data &nbsp <a href='/index/quit' class='user_info_login'>退出</a>";
+//                }else{
+//                    echo"<a href='/index/login' class='user_info_login'>Hi，请先登录</a><a href='/index/register' class='user_info_reg'>注册</a>";
+//                }
+//                ?>
+
+                <li style="padding-left:10px; background:url(/index/images/wei.png) no-repeat left center; background-size:18px;">
                     <a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">关注我们</a></a>
                     <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                        <img src="images/108430aeb.jpg" width="166" height="166"></div>
+                        <img src="/index/images/108430aeb.jpg" width="166" height="166"></div>
                 </li>
-                <li style="padding-left:10px; background:url(images/gwc.png) no-repeat left center; background-size:16px;">
-                    <a href="#">购物车</a>
+                <li style="padding-left:10px; background:url(/index/images/gwc.png) no-repeat left center; background-size:16px;">
+                    <a href="/personage/cart">购物车</a>
                     <span>|</span></a>
                 </li>
-                <a href="#">我的个人中心</a>
+                {{--<a href="#">我的个人中心</a>--}}
                 <span>|</span>
                 <a href="#">联系我们</a></ul>
         </div>
@@ -84,7 +49,7 @@
     <div class="juzhong">
         <div style="height:100px; background-color: #fff;width: 216px; float:left; position:absolute; top:31px;">
             <div>
-                <img src="images/jinyihe.png" style="height:100px; padding:0;margin: 5px auto;display: block;"></div>
+                <img src="/index/images/jinyihe.png" style="height:100px; padding:0;margin: 5px auto;display: block;"></div>
         </div>
         <div class="rf">
             <form name="search" action="#" method="post" style="display:inline; float:left; width:500px;">
@@ -112,7 +77,7 @@
                 <div class="phone">
                     <p class="time">客户服务热线：</p>
                     <p class="tel" style="color:#464646; font-size:22px; font-weight:bold;">18953815888</p></div>
-                <img src="images/ewm.jpg" width="80" style="float:right;"></div>
+                <img src="/index/images/ewm.jpg" width="80" style="float:right;"></div>
         </div>
     </div>
 </div>
@@ -122,7 +87,7 @@
         <div class="lf fenl">
             <div id="category-2015" onMouseOver="this.className='on'" onmouseleave="this.className=''">
                 <div class="ld">
-                    <img alt="所有产品分类" src="images/flbg.png" width="21" height="15" class="lf">所有产品分类
+                    <img alt="所有产品分类" src="/index/images/flbg.png" width="21" height="15" class="lf">所有产品分类
                 </div>
                 <div id="allsort" style="background:#fff;">
                     <div class="item" onmouseover="this.className='item on'" onmouseleave="this.className='item'">
@@ -1059,7 +1024,7 @@
             <!--分类end -->
         </div>
         <div class="rf nav" style="float:left;margin-left: 5px;">
-            <a href="#">
+            <a href="/">
                 <div>
                     <span style=" color:#fff;">首页</span>
                     <span style=" color:#fff;">首页</span></div>
@@ -1125,66 +1090,36 @@
         </div>
     </div>
 </div>
+<div style="width:1200px; margin:0 auto;">
+    <div style="width:900px; float:right;">
+        <!--页面标题 -->
+        <div class="qing cenk">
+            <div class="juzhong" style="width:900px;">
+                <div class="qing zilk">
+                    <div class="lf">
+                        <div class="touk" style="background: url(/index/images/moren_touxiang.jpg) center center no-repeat;border-radius:100px;"><img src="/index/images/txk.png" width="122" height="122"></div>
+                        <div class="lf">
+                            <div class="yhm"><?php echo $data['username'] ?></div>
+                            <a href="#" class="bjtx"><p style="float:left; line-height:25px; color:#000;">账户安全：</p><div style=" float:left; margin-left:5px;height:25px; background:#fff; width:100px;"><p style="height:25px; background:#e01222; width:30px;"></p></div></a>
+                            <p style="    line-height: 24px;">最后登录地址：111.14.93.246</p>
+                            <p style="    line-height: 24px;">最后登录时间：<?php echo $data['time'] ?></p>
+                        </div>
+                    </div>
+                    <div class="rf wdjf">
 
-<div class="qing tibg">
-    <div class="juzhong gwc-tk">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tbody><tr>
-                <td><img src="images/pa1.png" width="273" height="19"></td>
-                <td><img src="images/pa20.png" width="362" height="19"></td>
-                <td><img src="images/pa30.png" width="615" height="19"></td>
-            </tr>
-            </tbody></table>
-        <div class="qing chm">
-            <div class="lf" style="width:295px; text-align:right;">购物车</div>
-            <div class="lf" style="width:386px; text-align:right;">核对订单信息</div>
-            <div class="lf" style="width:323px; text-align:right;">支付成功</div>
+                        <div class="fen2">昨日释放金额：</div>
+                        <div class="fen2">今日释放金额：</div>
+                        <div class="fen2">代金券总额度：</div>
+                        <div class="fen2">优惠券总额度：</div>
+                        <div class="fen2">购物券总额度：</div>
+                    </div>
+                </div>
+                <div class="qing mynav">
+                    <a href="/personage/dpayment" style="background:#fdfcf3 url(/inedx/images/dfk.png) no-repeat 50px center; background-size:20px;">待付款</a>
+                    <a href="/personage/evaluate" style="background:#fdfcf3 url(/index/images/pj.png) no-repeat 50px center; background-size:20px;">待评价</a>
+                    <a href="/personage/receiving" style="background:#fdfcf3 url(/index/images/sh.png) no-repeat 50px center; background-size:20px;">待收货</a>
+                    <a href="tuikuan.html" style="background:#fdfcf3 url(/index/images/tk.png) no-repeat 50px center; background-size:20px;">退货详情</a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-<!--页面标题 -->
-<div class="qing juzhong" style="margin-bottom:40px;">
-    <div class="gwl">
-        <div class="gw-m">
-            <div class="gw-m1">商品名称</div>
-            <div class="gw-m2">单价</div>
-            <div class="gw-m3">数量</div>
-            <div class="gw-m4">小计</div>
-            <div class="gw-m5">操作</div>
-        </div>
-        <div class="gwlb">
-            <a href="#" class="gw-tu" style="background:url(images/484069aec.jpg) center center no-repeat;"></a>
-            <div class="gw-jk"><a href="#">2017-21《喜鹊》特种邮票小版票</a></div>
-            <div class="gw-jg">18.00元</div>
-            <div class="gw-sl"><a href="javascript:del_num('119');" class="gw-sl1 lf">-</a><input type="text" name="order_num_119" id="order_num_119" value="1" onblur="change_num('119')"><a href="javascript:add_num('119');" class="gw-sl2 rf">+</a></div>
-            <div class="gw-jg" id="heji_119">18</div>
-            <a href="javascript:del_cart('119');" class="shanc">×</a>
-        </div>
-        <div class="gwlb">
-            <a href="#" class="gw-tu" style="background:url(images/484069aec.jpg) center center no-repeat;"></a>
-            <div class="gw-jk"><a href="#">2017-21《喜鹊》特种邮票小版票</a></div>
-            <div class="gw-jg">18.00元</div>
-            <div class="gw-sl"><a href="javascript:del_num('119');" class="gw-sl1 lf">-</a><input type="text" name="order_num_119" id="order_num_119" value="1" onblur="change_num('119')"><a href="javascript:add_num('119');" class="gw-sl2 rf">+</a></div>
-            <div class="gw-jg" id="heji_119">18</div>
-            <a href="javascript:del_cart('119');" class="shanc">×</a>
-        </div>
-
-
-    </div>
-    <div class="gwzj">
-        <div class="lf chjx"><a href="#">继续购物</a>　　|　　共<span id="zongshuliang">2</span>件商品</div>
-        <div class="rf">
-            <div class="lf chhj">合计（现金+优惠券+代金券）：<span id="zongjiage">36</span>元</div>
-            <a href="heduixinxi.html" class="jie"><span>去结算</span><span>去结算</span></a>
-        </div>
-    </div>
-</div>
-<!--会员内容 -->
-
-</div>
-
-
-<div class="qing banq">所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任 。</div>
-<div class="qing banq" style="margin-bottom:20px;">鲁ICP备15028488号Copyright 中意商城2017，All Rights Reserved</div>
-</body>
-</html>
+        <!--会员内容 -->

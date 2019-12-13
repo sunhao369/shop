@@ -17,7 +17,5 @@ class BrandController extends Controller
    public function brandDel(Request $request){
 
        $id = $_REQUEST['id'];
-
-
    }
 }
