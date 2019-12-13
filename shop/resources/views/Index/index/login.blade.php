@@ -13,6 +13,7 @@
         <div class="lf">账号：</div>
         <input type="text" placeholder="请输入注册时的用户名" name="username" id="username">
       </div>
+
       <div class="lo-dl">
         <div class="lf">密码：</div>
         <input type="password" placeholder="请输入密码" name="password" id="password">
