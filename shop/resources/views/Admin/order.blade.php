@@ -89,7 +89,11 @@
         var id=$(this).val();
         // alert(id);
         $.ajax({
+<<<<<<< HEAD
             url:"http://www.shop.com/index.php/orderdel",
+=======
+            url:"http://www.shop.com/index.php/orderDel",
+>>>>>>> sh
             data:{
                 id:id
             },
