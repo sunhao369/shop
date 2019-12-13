@@ -119,7 +119,6 @@ class IndexController extends Controller
     public function show()
     {
         //
-        return view("Index/index/category");
     }
     /**
      * Show the form for editing the specified resource.
