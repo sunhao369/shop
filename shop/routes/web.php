@@ -57,4 +57,6 @@ Route::get('dommodityDel','Admin\Dommodity\DommodityController@dommodityDel');
 Route::get('gtypeShow','Admin\Gtype\GtypeController@gtypeShow');
 Route::get('gtypeDel','Admin\Gtype\GtypeController@gtypeDel');
 
-Route::get('index','Index\IndexController@index');
+Route::get('show','Admin\Gtype\BrandController@brand');
+Route::get('/','IndexController@index');
+

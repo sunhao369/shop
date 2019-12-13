@@ -106,9 +106,7 @@ class IndexController extends Controller
     public function store()
     {
         //
-        $order = new Orderdetail();
-        $data = $order::all();
-        return view("Index/index/index",['data'=>$data]);
+
     }
     /**
      * Display the specified resource.
