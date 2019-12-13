@@ -21,6 +21,10 @@
         <div class="lf">确认密码：</div>
         <input type="password" placeholder="请确认密码" name="repassword" id="repassword">
       </div>
+      <div class="lo-dl">
+        <div class="lf">邮  箱：</div>
+        <input type="email" placeholder="输入邮箱地址" name="email" id="email">
+      </div>
       
 
 

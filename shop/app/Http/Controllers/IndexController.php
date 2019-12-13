@@ -23,12 +23,17 @@ class IndexController extends Controller
         $data = $request->all();
         $username = $data['username'];
         $password = md5($data['password']);
-        $res = User::where('username', '=', $username)->where('password', '=', $password)->get();
- //       dd($res);
+        $res = User::where('username', '=', $username)->where('password', '=', $password)->first();
+//       dd($res);
       // $ls = $request->session();
       // var_dump($ls);die;
         if ($res){
 //            echo 1;
+            $id = $res['id'];
+//            dd($id);
+            session(['id'=> $id]);
+            $time = date('Y-m-d H:i:s');
+            session(['time' => $time]);
 
             session(['username' => $username]);
             $data = $request ->session()->get('username');
@@ -41,7 +46,7 @@ class IndexController extends Controller
 //        var_dump($data);die;
 
         }else{
-            echo 2;
+            echo "登录失败";
         }
 
     }
@@ -58,6 +63,7 @@ class IndexController extends Controller
         $user ->_token = $data['_token'];
         $user ->username = $data['username'];
         $user ->password = md5($data['password']);
+        $user ->email = $data['email'];
 //        dd($user);
         $res = $user->save();
         if ($res){
@@ -90,6 +96,7 @@ class IndexController extends Controller
         }
 
     }
+
 
     /**
      * Show the form for creating a new resource.

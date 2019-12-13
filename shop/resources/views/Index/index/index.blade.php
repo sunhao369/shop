@@ -7,14 +7,24 @@
 		</div>
 		<div class="rf toa">
 			<ul id="sddm">
-            	<li style="padding-left:10px; background:url(index/images/wei.png) no-repeat left center; background-size:18px;"><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">关注我们</a></a>
+            	<li style="padding-left:10px; background:url(/index/images/wei.png) no-repeat left center; background-size:18px;"><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">关注我们</a></a>
 				<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-					<img src="index/images/108430aeb.jpg" width="166" height="166">
+					<img src="/index/images/108430aeb.jpg" width="166" height="166">
 				</div>
 				</li>
-				<li style="padding-left:10px; background:url(index/images/gwc.png) no-repeat left center; background-size:16px;"><a href="#">购物车</a><span>|</span></a>
+				<li style="padding-left:10px; background:url(/index/images/gwc.png) no-repeat left center; background-size:16px;"><a href="#">购物车</a><span>|</span></a>
 				</li>
-				<a href="#">会员中心</a><span>|</span><a href="#">联系我们</a>
+                <?php
+                if(session()->has('username')){
+                    echo "<a href='/personage/index'>个人中心</a><span>|</span><a href='#'>联系我们</a>";
+                }else{
+                    echo"<a href='/index/login' class='user_info_login'>登录</a><a href='/index/register' class='user_info_reg'>注册</a>";
+                }
+                ?>
+
+                <p>
+
+                {{--<a href="/personage/index">个人中心</a><span>|</span><a href="#">联系我们</a>--}}
 			</ul>
 		</div>
 	</div>
