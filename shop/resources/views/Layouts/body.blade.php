@@ -1116,8 +1116,8 @@
                 </div>
                 <div class="qing mynav">
                     <a href="/personage/dpayment" style="background:#fdfcf3 url(/inedx/images/dfk.png) no-repeat 50px center; background-size:20px;">待付款</a>
-                    <a href="daipingjia.html" style="background:#fdfcf3 url(/index/images/pj.png) no-repeat 50px center; background-size:20px;">待评价</a>
-                    <a href="daishouhuo.html" style="background:#fdfcf3 url(/index/images/sh.png) no-repeat 50px center; background-size:20px;">待收货</a>
+                    <a href="/personage/evaluate" style="background:#fdfcf3 url(/index/images/pj.png) no-repeat 50px center; background-size:20px;">待评价</a>
+                    <a href="/personage/receiving" style="background:#fdfcf3 url(/index/images/sh.png) no-repeat 50px center; background-size:20px;">待收货</a>
                     <a href="tuikuan.html" style="background:#fdfcf3 url(/index/images/tk.png) no-repeat 50px center; background-size:20px;">退货详情</a>
                 </div>
             </div>

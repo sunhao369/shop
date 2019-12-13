@@ -71,6 +71,22 @@ class PersonageController extends Controller
         return view('Index/personage/dpayment',['data'=>$data]);
     }
 
+
+    //代评论
+    public function evaluate(Request $request){
+
+        $data = $request ->session()->all();
+        return view('Index/personage/evaluate',['data'=>$data]);
+    }
+
+    //待收货
+
+    public function receiving(Request $request){
+
+        $data = $request ->session()->all();
+        return view('Index/personage/receiving',['data'=>$data]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

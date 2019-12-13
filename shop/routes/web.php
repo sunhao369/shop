@@ -63,3 +63,5 @@ Route::get('/personage/pay','PersonageController@pay');
 Route::get('/personage/address','PersonageController@address');
 Route::get('/personage/recommend','PersonageController@recommend');
 Route::get('/personage/dpayment','PersonageController@dpayment');
+Route::get('/personage/evaluate','PersonageController@evaluate');
+Route::get('/personage/receiving','PersonageController@receiving');
