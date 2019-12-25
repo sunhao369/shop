@@ -34,9 +34,11 @@ class UsersController extends Controller
 
         $res = DB::table("user")->insert($data);
         if ($res){
-            echo "1";
+            echo "<script>alert('添加成功');</script> ";
+//            return Redirect::to('list');
+//            return redirect('Admin\userShow');
         }else{
-            echo "0";
+
         }
     }
 }

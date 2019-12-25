@@ -111,7 +111,7 @@
         // alert(123);
         var id=$(this).val();
         $.ajax({
-            url:"http://www.shop.com/index.php/gtypeDel",
+            url:"http://www.shop.com/index.php/brandDel",
             data:{
                 id:id
             },

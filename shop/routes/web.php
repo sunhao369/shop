@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('list', 'Admin\AdminController@index');
 Route::get('create', 'Admin\AdminController@create');
 Route::any('store', 'Admin\AdminController@store');
-Route::get('admin', 'Admin\IndexController@index');
+Route::get('/admin', 'Admin\IndexController@index');
 Route::any('login', 'Admin\Login\LoginController@login');
 Route::any('doLogin', 'Admin\Login\LoginController@doLogin');
 
@@ -42,7 +42,6 @@ Route::post('userAdd','Admin\UsersController@userAdd');
 
 
 Route::get('order','Admin\OrderController@order');
-Route::get('orderShow','Admin\OrderController@ordershow');
 Route::get('orderAdd','Admin\OrderController@orderadd');
 Route::get('orderDel','Admin\OrderController@orderdel');
 Route::post('orderCreate','Admin\orderController@orderCreate');
@@ -58,6 +57,7 @@ Route::get('gtypeShow','Admin\Gtype\GtypeController@gtypeShow');
 Route::get('gtypeDel','Admin\Gtype\GtypeController@gtypeDel');
 
 Route::get('show','Admin\Gtype\BrandController@brand');
+Route::get('brandDel','Admin\Gtype\BrandController@brandDel');
 
 Route::get('/','IndexController@index');
 Route::get('index/login','IndexController@login');

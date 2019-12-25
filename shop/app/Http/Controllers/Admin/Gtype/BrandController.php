@@ -17,5 +17,14 @@ class BrandController extends Controller
    public function brandDel(Request $request){
 
        $id = $_REQUEST['id'];
+
+       $brand = new Admin();
+
+       $res = $brand::destroy($id);
+       if ($res){
+           echo "1";
+       }else{
+           echo "0";
+       }
    }
 }

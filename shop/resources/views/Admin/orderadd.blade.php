@@ -60,7 +60,7 @@
                 <span class="x-red">*</span>商品图片
             </label>
             <div class="layui-input-inline">
-                <input type="text" name="product_image" required="" lay-verify="nikename"
+                <input type="file" name="product_image" required="" lay-verify="nikename"
                        autocomplete="off" class="layui-input">
             </div>
         </div>
